@@ -1,0 +1,55 @@
+{
+  "name": "rasa-tools",
+  "displayName": "Rasa Tools",
+  "description": "Rasa development tools",
+  "author": "Kevin Castro",
+  "publisher": "ortsaCniveK",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.28.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ortsaCniveK/rasa-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ortsaCniveK/rasa-tools/issues"
+  },
+  "homepage": "https://github.com/ortsaCniveK/rasa-tools#readme",
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "markdown",
+        "path": "./snippets/markdown.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python.json"
+      },
+      {
+        "language": "yaml",
+        "path": "./snippets/yaml.json"
+      }
+    ]
+  },
+  "keywords": [
+    "Rasa",
+    "Tools",
+    "NLP",
+    "NLU",
+    "Chatbot",
+    "Chat",
+    "Bot",
+    "Open Source"
+  ],
+  "icon": "images/rasa-logo.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "license": "MIT",
+  "dependencies": {}
+}

@@ -1,0 +1,83 @@
+{
+  "buttons": {
+    "scope": "yaml",
+    "prefix": [
+      "utter_buttons"
+    ],
+    "body": [
+      "utter_${1:name}:",
+      "\t- text: \"${2:text}\"",
+      "\tbuttons:",
+      "\t\t- title: \"${1:title}\"",
+      "\t\t  payload: \"${2:payload}\"",
+      "\t\t- title: \"${3:title}\"",
+      "\t\t  payload: \"${4:payload}\"",
+      "\t\t- title: \"${5:title}\"",
+      "\t\t  payload: \"${6:payload}\"",
+      "\t\t- title: \"${7:title}\"",
+      "\t\t  payload: \"${8:payload}\"",
+      "\t\t- title: \"${9:title}\"",
+      "\t\t  payload: \"${10:payload}\"",
+      "$0"
+    ],
+    "description": "Button attachment at max value"
+  },
+  "channel": {
+    "scope": "yaml",
+    "prefix": [
+      "utter_channel"
+    ],
+    "body": [
+      "utter_${1:name}:",
+      "\t- text: \"${2:text}\"",
+      "\t  channel: \"${3:channel}\"",
+      "$0"
+    ],
+    "description": "Utterance with channel attachment"
+  },
+  "image": {
+    "scope": "yaml",
+    "prefix": [
+      "utter_image"
+    ],
+    "body": [
+      "utter_${1:name}:",
+      "\t- text: \"${2:text}\"",
+      "\t  image: \"${3:url}\"",
+      "$0"
+    ],
+    "description": "Utterance with an image attachment"
+  },
+  "utterance": {
+    "scope": "yaml",
+    "prefix": [
+      "utter_text",
+      "utterance",
+      "message"
+    ],
+    "body": [
+      "utter_${1:name}:",
+      "\t- text: \"${2:text}\"",
+      "$0"
+    ],
+    "description": "Simple text utterance"
+  },
+  "yesno": {
+    "scope": "yaml",
+    "prefix": [
+      "affirmdeny",
+      "utter_yesno"
+    ],
+    "body": [
+      "utter_${1:name}:",
+      "\t- text: \"${2:text}\"",
+      "\tbuttons:",
+      "\t\t- title: \"Yes\"",
+      "\t\t  payload: /affirm",
+      "\t\t- title: \"No\"",
+      "\t\t  payload: /deny",
+      "$0"
+    ],
+    "description": "Yes/no button message"
+  }
+}

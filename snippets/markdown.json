@@ -1,0 +1,116 @@
+{
+	"checkpoint_parent": {
+		"scope": "markdown",
+		"prefix": [
+			"> parent_checkpoint"
+		],
+		"body": [
+			"## ${1:story_name}",
+			"* ${2:intent}",
+			"\t-${3| utter_, |}",
+			"> ${4:checkpoint_name}",
+			"",
+			"$0"
+		],
+		"description": "Story ending with a checkpoint"
+	},
+	"checkpoint_child": {
+		"scope": "markdown",
+		"prefix": [
+			"> child_checkpoint"
+		],
+		"body": [
+			"## ${1:story_name}",
+			"* ${2:intent}",
+			"\t-${3| utter_, |}",
+			"> ${4:checkpoint_name}",
+			"",
+			"$0"
+		],
+		"description": "Story starting with a checkpoint"
+	},
+	"end-to-end": {
+		"scope": "markdown",
+		"prefix": [
+			"end-to-end",
+			"test"
+		],
+		"body": [
+			"## ${1:story_name} test",
+			"* ${2:intent}: ${3:message text}",
+			"\t-${4| utter_, |}",
+			"",
+			"$0"
+		],
+		"description": "End-to-end story"
+	},
+	"entity": {
+		"scope": "markdown",
+		"prefix": [
+			"entity",
+			"[]"
+		],
+		"body": [
+			"[${1:entity_example}](${2:entity${3::${4:value}}})"
+		],
+		"description": "Entity"
+	},
+	"intent": {
+		"scope": "markdown",
+		"prefix": [
+			"intent"
+		],
+		"body": [
+			"## intent:${1:intent_name}",
+			"- ${2:intent_example}"
+		],
+		"description": "Structure for an intent"
+	},
+	"lookup": {
+		"scope": "markdown",
+		"prefix": [
+			"lookup"
+		],
+		"body": [
+			"## lookup:${1:entity}",
+			"${2:path/to/lookup/table}"
+		],
+		"description": "Structure for an entity lookup table"
+	},
+	"regex": {
+		"scope": "markdown",
+		"prefix": [
+			"regex"
+		],
+		"body": [
+			"## regex:${1:entity}",
+			"- ${2:regex_string}"
+		],
+		"description": "Structure for entity regex features"
+	},
+	"story": {
+		"scope": "markdown",
+		"prefix": [
+			"story",
+			"## "
+		],
+		"body": [
+			"## ${1:story_name}",
+			"* ${2:intent}",
+			"\t-${3| utter_, |}",
+			"$0"
+		],
+		"description": "Structure for a simple story"
+	},
+	"synonym": {
+		"scope": "markdown",
+		"prefix": [
+			"synonym"
+		],
+		"body": [
+			"## synonym:${1:entity}",
+			"- ${2:synonym_example}"
+		],
+		"description": "Structure for entity synonyms"
+	}
+}

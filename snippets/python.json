@@ -1,0 +1,70 @@
+{
+	"custom action": {
+		"scope": "python",
+		"prefix": [
+			"imports rasa"
+		],
+		"body": [
+			"from typing import Any, Text, Dict, List",
+			"",
+			"from rasa_sdk import Action, Tracker",
+			"from rasa_sdk.executor import CollectingDispatcher",
+			"",
+			"",
+			"$0"
+		],
+		"description": "Rasa imports for new custom action files"
+	},
+	"custom action class": {
+		"scope": "python",
+		"prefix": [
+			"custom action"
+		],
+		"body": [
+			"class $1(Action):",
+			"\t\"\"\"$3\"\"\"",
+			"",
+			"\tdef name(self) -> Text:",
+			"\t\treturn \"$2\"",
+			"",
+			"\tdef run(",
+			"\t\tself,",
+			"\t\tdispatcher: CollectingDispatcher,",
+			"\t\ttracker: Tracker,",
+			"\t\tdomain: Dict[Text, Any]",
+			"\t) -> List[Dict[Text, Any]]:",
+			"",
+			"\t\tdispatcher.utter_message($4)",
+			"",
+			"\t\treturn []",
+			"$0"
+		],
+		"description": "Rasa custom action class"
+	},
+	"custom mapping class": {
+		"scope": "python",
+		"prefix": [
+			"custom mapping"
+		],
+		"body": [
+			"class $1(Action):",
+			"\t\"\"\"${3:dispatches messages mapped to this action}\"\"\"",
+			"",
+			"\tdef name(self) -> Text:",
+			"\t\treturn \"$2",
+			"",
+			"\tdef run(",
+			"\t\tself,",
+			"\t\tdispatcher: CollectingDispatcher,",
+			"\t\ttracker: Tracker,",
+			"\t\tdomain: Dict[Text, Any]",
+			"\t) -> List[Dict[Text, Any]]:",
+			"",
+			"\t\tdispatcher.utter_message($4)",
+			"",
+			"\t\treturn [UserUtteranceReverted()]",
+			"$0"
+		],
+		"description": "Rasa custom mapping class"
+	}
+}
