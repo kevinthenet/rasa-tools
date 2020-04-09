@@ -51,5 +51,12 @@
     "theme": "dark"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "vsce": "^1.75.0"
+  }
 }
