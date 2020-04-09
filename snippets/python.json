@@ -2,7 +2,7 @@
 	"custom action": {
 		"scope": "python",
 		"prefix": [
-			"imports rasa"
+			"rasa"
 		],
 		"body": [
 			"from typing import Any, Text, Dict, List",
