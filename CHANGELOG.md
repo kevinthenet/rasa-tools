@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2020-04-15
+
+### Added
+- added basic form class snippet
+
+### Changed
+- removed redundant wording from snippet descriptions
+
 ## [1.0.1] - 2020-04-01
 
 ### Changed
