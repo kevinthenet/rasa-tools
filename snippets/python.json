@@ -13,7 +13,7 @@
 			"",
 			"$0"
 		],
-		"description": "Rasa imports for new custom action files"
+		"description": "Rasa imports for new actions file"
 	},
 	"custom action class": {
 		"scope": "python",
@@ -39,7 +39,7 @@
 			"\t\treturn []",
 			"$0"
 		],
-		"description": "Rasa custom action class"
+		"description": "Rasa action class"
 	},
 	"custom form class": {
 		"scope": "python",
@@ -80,7 +80,7 @@
 			"\t\treturn [$6]",
 			"$0"
 		],
-		"description": "Rasa custom form class"
+		"description": "Rasa form class"
 	},
 	"custom mapping class": {
 		"scope": "python",
@@ -106,6 +106,6 @@
 			"\t\treturn [UserUtteranceReverted()]",
 			"$0"
 		],
-		"description": "Rasa custom mapping class"
+		"description": "Rasa mapping class"
 	}
 }
