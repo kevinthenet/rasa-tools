@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.0] - 2020-04-15
 
 ### Added
-- added basic form class snippet
+- added basic [form class](https://rasa.com/docs/rasa/core/forms/) snippet
+- added [custom NLU component](https://rasa.com/docs/rasa/api/custom-nlu-components/) file snippet
 
 ### Changed
 - removed redundant wording from snippet descriptions
