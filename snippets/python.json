@@ -13,7 +13,7 @@
 			"",
 			"$0"
 		],
-		"description": "Rasa imports for new custom action files"
+		"description": "Rasa imports for new actions file"
 	},
 	"custom action class": {
 		"scope": "python",
@@ -39,7 +39,48 @@
 			"\t\treturn []",
 			"$0"
 		],
-		"description": "Rasa custom action class"
+		"description": "Rasa action class"
+	},
+	"custom form class": {
+		"scope": "python",
+		"prefix": "form",
+		"body": [
+			"class $1(FormAction):",
+			"",
+			"\tdef name(self) -> Text:",
+			"\t\treturn \"restaurant_form\"",
+			"",
+			"\t@staticmethod",
+			"\tdef required_slots(tracker: Tracker) -> List[Text]:",
+			"\t\t\"\"\"A list of required slots that the form has to fill\"\"\"",
+			"",
+			"\t\treturn [$2]",
+			"",
+			"\tdef slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:",
+			"\t\t\"\"\"A dictionary to map required slots to",
+			"\t\t\t- an extracted entity (self.from_entity())",
+			"\t\t\t- intent: value pairs (self.from_intent())",
+			"\t\t\t- a whole message (self.from_text())",
+			"\t\t\tor a list of them, where a first match will be picked\"\"\"",
+			"",
+			"\t\treturn {",
+			"\t\t\t\"$3\": $4",
+			"\t\t}",
+			"",
+			"\tdef submit(",
+			"\t\tself,",
+			"\t\tdispatcher: CollectingDispatcher,",
+			"\t\ttracker: Tracker,",
+			"\t\tdomain: Dict[Text, Any],",
+			"\t) -> List[Dict]:",
+			"\t\t\"\"\"Define what the form has to do",
+			"\t\t\tafter all required slots are filled\"\"\"",
+			"\t\t$5",
+			"",
+			"\t\treturn [$6]",
+			"$0"
+		],
+		"description": "Rasa form class"
 	},
 	"custom mapping class": {
 		"scope": "python",
@@ -65,6 +106,6 @@
 			"\t\treturn [UserUtteranceReverted()]",
 			"$0"
 		],
-		"description": "Rasa custom mapping class"
+		"description": "Rasa mapping class"
 	}
 }
